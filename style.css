@@ -1,0 +1,426 @@
+@import url("/fonts/stylesheet.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.text {
+  width: fit-content;
+  margin: 0 auto;
+}
+.text h1 {
+  padding: 10px 20px;
+  background: #fdb10d;
+  font-family: "Gilroy";
+  text-align: center;
+}
+.text h2 {
+  font-family: "Autom";
+  font-size: 30px;
+  margin-top: 10px;
+}
+.text h2 span {
+  font-size: 33px;
+}
+
+/* dron */
+
+.absolut_images {
+  position: absolute;
+  top: 0; /* Dronning boshlang'ich holati */
+  left: 1220px;
+  transition: all 2s ease-in-out; /* Harakatni silliqlash uchun */
+  z-index: -1;
+}
+
+img {
+  width: 600px; /* Dron tasvirining o'lchami */
+}
+
+/* dron rasmi tugadi */
+
+.effect {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.effect-text {
+  position: absolute;
+  background-color: white;
+  bottom: -100%; /* Text ko'rinmaydi */
+  left: 0;
+  width: 100%;
+  transition: bottom 1.5s ease-in-out; /* Silliq animatsiya */
+}
+
+.effect-text p {
+  font-size: 30px;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* Animatsiya boshlash uchun `active` klass */
+.effect-text.active {
+  bottom: 0; /* Text ko'rinadigan holat */
+}
+
+.zarif_aka {
+  width: 70%;
+}
+
+/* MARQUUE */
+#maindiv {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  height: 50px; /* Yozuvga moslash uchun balandlik */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  font-family: "Gilroy";
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#innerdiv,
+#innerdiv2 {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+#innerdiv {
+  animation: marquee 20s linear infinite;
+}
+
+#innerdiv2 {
+  left: 100%; /* Keyingi divni birinchisidan keyin boshlash */
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.register {
+  color: #fff;
+  text-align: center;
+  font-family: "Gilroy";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 58px; /* 120.833% */
+  background-color: black;
+  border: none;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.register:hover {
+  background-color: #fdb10d;
+}
+
+.main-text {
+  font-family: "Gilroy";
+}
+
+.main-text h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+.main-text ul {
+  width: 40vw;
+}
+.main-text ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* frequently ask uchun tayyor shablonlar */
+
+footer {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy";
+  color: #000000;
+  display: flex;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 4rem 20px;
+  width: 48rem;
+  position: relative;
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion .accordion-item button[aria-expanded="true"] {
+  border-bottom: 1px solid #fdb10d;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #202020;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: #fdb10d;
+}
+.accordion button:hover::after,
+.accordion button:focus::after {
+  cursor: pointer;
+  color: #fdb10d;
+  border: 1px solid #fdb10d;
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded="true"] {
+  color: #fdb10d;
+}
+.accordion button[aria-expanded="true"] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded="true"] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+
+.dronespider {
+  position: absolute;
+  bottom: 30px;
+  width: 300px;
+  right: -400px;
+}
+
+/* Responsive dizayn uchun media query */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    padding-top: 30px;
+    flex-direction: column;
+  }
+
+  .text h1 {
+    font-size: 24px;
+    padding: 8px 16px;
+  }
+
+  .text h2 {
+    font-size: 20px;
+  }
+
+  .text h2 span {
+    font-size: 22px;
+  }
+
+  /* Dron rasmi */
+  .absolut_images img {
+    width: 300px; /* Dron tasvirining kichraytirilgan o‘lchami */
+  }
+
+  .absolut_images {
+    top: 50px;
+    left: 50%; /* Ekranning o‘rtasiga yaqinlashtirish */
+    transform: translateX(-50%);
+  }
+
+  /* Effect text */
+  .effect {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .effect-text p {
+    font-size: 18px; /* Matn o‘lchamini kichraytirish */
+    padding: 8px 16px;
+  }
+
+  /* Zarif aka rasmi */
+  .zarif_aka {
+    width: 90%; /* Mobil ekran uchun rasmni kattalashtirish */
+  }
+
+  /* Marquee */
+  #maindiv {
+    font-size: 18px; /* Yozuv o‘lchamini kichraytirish */
+    height: 40px; /* Bo‘yi moslashtirish */
+  }
+
+  /* Main-text */
+  .main-text h1 {
+    font-size: 28px;
+  }
+
+  .main-text ul {
+    width: 90%; /* Matn konteynerini ekranga moslashtirish */
+  }
+
+  .main-text ul li {
+    font-size: 16px; /* Matn o‘lchamini kichraytirish */
+  }
+
+  /* Ro'yxatdan o'tish tugmasi */
+  .register {
+    font-size: 16px; /* Tugmani moslashtirish */
+    line-height: 40px;
+    padding: 10px 16px;
+    margin: 20px auto;
+  }
+  .dronespider {
+    width: 200px;
+    right: 20px;
+    bottom: 0;
+  }
+}
+
+/* shape effect */
+.shape_effects {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  width: 100%; /* Frame kengligi */
+  height: 2865px; /* Frame balandligi */
+}
+
+.shape_effects .shape1 {
+  width: 730.213px;
+  height: 730.213px;
+  transform: rotate(-114.685deg);
+  border-radius: 730.213px;
+  background: rgba(172, 106, 255, 0.5);
+  filter: blur(125px);
+  position: absolute;
+  left: -440px; /* Chapdan joylashuv */
+  top: calc(50% - 365px); /* O'rtada joylashgan (yarim balandlik minus radius) */
+}
+
+.shape_effects .shape2 {
+  width: 479.502px;
+  height: 479.502px;
+  transform: rotate(73.829deg);
+  border-radius: 879.502px;
+  background: #ffdf6c;
+  filter: blur(125px);
+  position: absolute;
+  top: 540px; /* Yuqoridan 1080px */
+  left: calc(50% - 339.751px); /* O'rtada joylashgan (kenglikning yarmi minus radius) */
+}
+
+.shape_effects .shape3 {
+  width: 1106.574px;
+  height: 1106.574px;
+  transform: rotate(65.432deg);
+  border-radius: 1106.574px;
+  background: rgba(90, 248, 153, 0.7);
+  filter: blur(125px);
+  position: absolute;
+  top: -900px; /* Yuqoridan -200px */
+  left: 1020px; /* O'ngdan tashqariga chiqadi */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
