@@ -6,6 +6,11 @@
   box-sizing: border-box;
   font-family: "Gilroy", sans-serif;
 }
+body {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
 
 .container {
   display: flex;
@@ -89,4 +94,36 @@ input[type="tel"] {
   .right {
     width: 100%;
   }
+}
+
+.shape_effects {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1; /* Orqa fonda ko'rinishi uchun */
+}
+
+.shape1 {
+  width: 1106.574px;
+  height: 1106.574px;
+  transform: rotate(65.432deg);
+  border-radius: 1106.574px;
+  background: #d3f193;
+  filter: blur(125px);
+  position: absolute;
+  bottom: -100%;
+  left: 80%;
+}
+
+.shape2 {
+  width: 736.79px;
+  height: 736.79px;
+  transform: rotate(38.438deg);
+  border-radius: 736.79px;
+  opacity: 0.8;
+  background: #f19393;
+  position: absolute;
+  filter: blur(125px);
+  top: 0;
+  left: -710px;
 }
