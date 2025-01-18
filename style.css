@@ -86,24 +86,22 @@ img {
 }
 
 /* MARQUUE */
-#maindiv {
+/* Umumiy uslub */
+#maindiv,
+marquee {
   background-color: black;
   color: white;
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  width: 100%;
-  height: 50px; /* Yozuvga moslash uchun balandlik */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 27px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  overflow: hidden;
 }
 
+/* Marquee animatsiya uchun */
 #innerdiv,
 #innerdiv2 {
   display: inline-block;
@@ -117,7 +115,7 @@ img {
 }
 
 #innerdiv2 {
-  left: 100%; /* Keyingi divni birinchisidan keyin boshlash */
+  left: 100%;
   animation: marquee 20s linear infinite;
 }
 
@@ -129,6 +127,20 @@ img {
     transform: translateX(-100%);
   }
 }
+
+
+/* Faqat desktop uchun */
+@media (min-width: 769px) {
+  .desktop-only {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-only {
+    display: none;
+  }
+}
+
 
 main {
   width: 100%;

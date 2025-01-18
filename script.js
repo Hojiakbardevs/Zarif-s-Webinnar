@@ -63,4 +63,19 @@ document.addEventListener("DOMContentLoaded", () => {
   
     window.addEventListener("resize", updateAccordionStyle);
   });
-  
+  document.addEventListener("DOMContentLoaded", () => {
+    function toggleMarqueeVisibility() {
+        const desktopMarquee = document.querySelector("#maindiv");
+        const mobileMarquee = document.querySelector("marquee");
+        if (window.innerWidth <= 768) {
+            desktopMarquee.style.display = "none";
+            mobileMarquee.style.display = "block";
+        } else {
+            desktopMarquee.style.display = "flex";
+            mobileMarquee.style.display = "none";
+        }
+    }
+
+    toggleMarqueeVisibility();
+    window.addEventListener("resize", toggleMarqueeVisibility);
+});
