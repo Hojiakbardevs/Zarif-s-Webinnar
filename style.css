@@ -68,7 +68,7 @@ img {
 }
 
 .effect-text p {
-  font-size: 30px;
+  font-size: 28px;
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
   padding: 10px 20px;
@@ -82,6 +82,7 @@ img {
 
 .zarif_aka {
   width: 70%;
+  max-width: 780px;
 }
 
 /* MARQUUE */
@@ -167,7 +168,8 @@ main {
   margin-bottom: 20px;
 }
 .main-text ul {
-  width: 40vw;
+  min-width: 40vw;
+  width: 50vw;
 }
 .main-text ul li {
   list-style: none;
@@ -325,9 +327,11 @@ footer {
     padding: 0 10px;
   }
 
+
   .effect-text p {
     font-size: 18px; /* Matn o‘lchamini kichraytirish */
     padding: 8px 16px;
+
   }
 
   /* Zarif aka rasmi */
@@ -344,10 +348,12 @@ footer {
   /* Main-text */
   .main-text h1 {
     font-size: 28px;
+    text-align: center;
   }
 
   .main-text ul {
     width: 90%; /* Matn konteynerini ekranga moslashtirish */
+    margin: 0 auto;
   }
 
   .main-text ul li {
@@ -364,8 +370,32 @@ footer {
   .dronespider {
     width: 200px;
     right: 20px;
-    bottom: 0;
+    bottom: -200px;
   }
+  .zarif_aka{
+    width: 100%;
+  }
+
+  .container h2{
+    margin-bottom: 10px;
+  }
+  .accordion-item{
+    margin-bottom: 10px;
+  }
+  .accordion button {
+    font-weight: 500;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .accordion button {
+    font-weight: 500;
+    width: 90%;
+  }
+
 }
 
 /* shape effect */
