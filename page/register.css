@@ -127,3 +127,7 @@ input[type="tel"] {
   top: 0;
   left: -710px;
 }
+
+.logo{
+  width: 100%;
+}
