@@ -195,15 +195,19 @@ footer {
   margin: 0;
   padding: 0;
   font-family: "Gilroy";
-  color: #000000;
+  color: white;
   display: flex;
+  background-color: #15161a;
+  position: relative;
+  filter: none;
 }
 
 .container {
   margin: 0 auto;
   padding: 4rem 20px;
-  width: 48rem;
+  width: 55vw;
   position: relative;
+  z-index: 1;
 }
 
 .accordion .accordion-item {
@@ -218,7 +222,7 @@ footer {
   text-align: left;
   width: 100%;
   padding: 1em 0;
-  color: #202020;
+  color: #e5e5e5;
   font-size: 1.15rem;
   font-weight: 400;
   border: none;
@@ -297,8 +301,10 @@ footer {
 .dronespider {
   position: absolute;
   bottom: 30px;
-  width: 300px;
+  width: 500px;
   right: -400px;
+  z-index: -1;
+  mix-blend-mode: multiply;
 }
 
 /* Responsive dizayn uchun media query */
