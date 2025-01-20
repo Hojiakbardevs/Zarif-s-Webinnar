@@ -205,7 +205,7 @@ footer {
 .container {
   margin: 0 auto;
   padding: 4rem 20px;
-  width: 55vw;
+  max-width: 55vw;
   position: relative;
   z-index: 1;
 }
@@ -387,11 +387,14 @@ footer {
   }
   .dronespider {
     width: 200px;
-    right: 20px;
-    bottom: -200px;
+    right: -70px;
+    
   }
   .zarif_aka{
     width: 100%;
+  }
+  .container{
+    max-width: 90vw;
   }
 
   .container h2{
